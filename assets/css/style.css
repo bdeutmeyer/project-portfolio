@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+header {
+    background-image: url(../images/PXL_20230810_165834209.jpg);
+    max-height: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: white;
+}
+
+li, a{
+    color: white;
+    text-decoration: none;
+}
