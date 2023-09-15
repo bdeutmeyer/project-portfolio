@@ -1,22 +1,40 @@
 * {
     box-sizing: border-box;
+    
 }
 
-body {
-
+main {
+    background-color: lightgray;
 }
 
 header {
     background-image: url(../images/PXL_20230810_165834209.jpg);
-    max-height: 500px;
+    background-size: contain;
+    padding: 20px;
+    margin: 0;
+    border: 0;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 15px solid rgb(115, 115, 110);
 }
 
 h1 {
     color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 300%;
 }
 
-li, a{
+
+
+nav {
+    list-style-type: none;
+    display: flex;
+
+}
+
+nav ul li, a{
     color: white;
     text-decoration: none;
+    line-height: 2;
 }
