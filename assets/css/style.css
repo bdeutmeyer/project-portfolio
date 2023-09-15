@@ -3,38 +3,67 @@
     
 }
 
-main {
-    background-color: lightgray;
+:root {
+    --porcini: rgb(115, 115, 110);
 }
 
 header {
     background-image: url(../images/PXL_20230810_165834209.jpg);
     background-size: contain;
-    padding: 20px;
-    margin: 0;
-    border: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 15px solid rgb(115, 115, 110);
+    display: block;
+    border-bottom: 15px solid  var(--porcini);
+    position: relative;
+}
+
+img {
+    width: 60px;
+    height: auto;
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
 
 h1 {
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 300%;
+    position: relative;
+    padding: 50px;
 }
 
-
+h1::after {
+    content: "Web Development Portfolio";
+    position: absolute;
+    top: 95px;
+    left: 50px;
+    color: lightgrey;
+    font-size: 40%;
+}
 
 nav {
-    list-style-type: none;
-    display: flex;
+    display: block;
+    
+}
 
+nav ul {
+    list-style-type: none;
+    float: right;
+    width: 100%;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: var(--porcini);
+    padding: 0px 20px;
 }
 
 nav ul li, a{
     color: white;
     text-decoration: none;
     line-height: 2;
+    padding: 0px 20px;
+}
+
+main {
+    background-color: lightgray;
 }
