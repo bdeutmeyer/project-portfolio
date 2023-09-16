@@ -5,6 +5,8 @@
 
 :root {
     --porcini: rgb(115, 115, 110);
+    --lightgrey: lightgrey;
+    --white: white;
 }
 
 header {
@@ -26,7 +28,7 @@ img {
 } */
 
 h1 {
-    color: white;
+    color: var(--white);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 300%;
     position: relative;
@@ -38,7 +40,7 @@ h1::after {
     position: absolute;
     top: 95px;
     left: 50px;
-    color: lightgrey;
+    color: var(--lightgrey);
     font-size: 40%;
 }
 
@@ -67,5 +69,23 @@ nav ul li, a{
 }
 
 main {
-    background-color: lightgray;
+    background-color: var(--lightgrey);
+}
+#marketing img {
+    width: 400px;
+}
+
+footer {
+    background-color: var(--porcini);
+    color: var(--white);
+    font-weight: lighter;
+    font-size: 60%;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer a {
+    padding: 0;
 }
