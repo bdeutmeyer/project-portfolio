@@ -1,3 +1,4 @@
+/* Universal things */
 * {
     box-sizing: border-box;
     
@@ -8,7 +9,7 @@
     --lightgrey: lightgrey;
     --white: white;
 }
-
+/* Header */
 header {
     background-image: url(../images/PXL_20230810_165834209.jpg);
     background-size: contain;
@@ -27,6 +28,7 @@ img {
     right: 5px;
 } */
 
+/* Main heading */
 h1 {
     color: var(--white);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -44,9 +46,9 @@ h1::after {
     font-size: 40%;
 }
 
+/* Navigation bar */
 nav {
     display: block;
-    
 }
 
 nav ul {
@@ -67,19 +69,71 @@ nav ul li, a{
     line-height: 2;
     padding: 0px 20px;
 }
-
+/* Main box with content and sidebar */
 main {
     background-color: var(--lightgrey);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 }
+
+/* .content {
+    display: inline-block;
+    width: 75%;
+    float: right;
+} */
+
+/* Has centered headings not display for bigger screens */
+.smallscreen {
+    display: none;
+}
+
+.headings {
+    width: 200px;
+}
+
+#about-side {
+    height: 200px;
+}
+
+#about p {
+    /* margin: 10px; */
+    width: 75%;
+}
+
+#work {
+    width: 75%;
+    display: flex;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#marketing {
+    width: 100%;
+}
+
 #marketing img {
     width: 400px;
 }
 
+.card {
+    width: 50%;
+    height: 200px;
+    border: 1px solid;
+}
+
+/* Footer */
 footer {
     background-color: var(--porcini);
     color: var(--white);
     font-weight: lighter;
     font-size: 60%;
+    display: block;
 }
 
 footer p {
@@ -88,4 +142,34 @@ footer p {
 
 footer a {
     padding: 0;
+}
+
+/* Media queries */
+@media screen and (max-width: 992px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    .smallscreen {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .headings {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    .smallscreen {
+        display: block;
+        text-align: center;
+        width: 100%
+    }
+
+    .headings {
+        display: none;
+    }
 }
