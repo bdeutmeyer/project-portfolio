@@ -72,10 +72,11 @@ nav ul li, a{
 /* Main box with content and sidebar */
 main {
     background-color: var(--lightgrey);
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     width: 100%;
+    display:block;
 }
 
 /* .content {
@@ -89,17 +90,38 @@ main {
     display: none;
 }
 
-.headings {
+/* .headings {
     width: 200px;
+} */
+
+/* #about-side {
+    height: 200px;
+} */
+#about::before,
+#work::before,
+#contact::before {
+    font-size: 300%;
+    color: var(--porcini);
+    border-right: 5px solid var(--porcini);
+    padding: 10px 50px;
+    margin-right: 10px;
 }
 
-#about-side {
-    height: 200px;
+#about {
+    width: 100%;
+}
+
+#about::before {
+    content: "About";
 }
 
 #about p {
-    /* margin: 10px; */
-    width: 75%;
+    width: 65%;
+    float: right;
+}
+
+#work::before {
+    content: "Work";
 }
 
 #work {
@@ -125,6 +147,10 @@ main {
     width: 50%;
     height: 200px;
     border: 1px solid;
+}
+
+#contact::before {
+    content: "Contact";
 }
 
 /* Footer */
