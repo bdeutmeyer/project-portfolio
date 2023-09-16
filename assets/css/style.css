@@ -15,13 +15,15 @@ header {
     position: relative;
 }
 
+/* 
+For profile image (but I think I want it at the bottom instead)
 img {
     width: 60px;
     height: auto;
     position: absolute;
     top: 5px;
     right: 5px;
-}
+} */
 
 h1 {
     color: white;
