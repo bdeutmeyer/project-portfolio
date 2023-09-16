@@ -11,7 +11,7 @@
 }
 /* Header */
 header {
-    background-image: url(../images/PXL_20230810_165834209.jpg);
+    background-image: url(../images/frost.jpg);
     background-size: contain;
     display: block;
     border-bottom: 15px solid  var(--porcini);
@@ -72,31 +72,15 @@ nav ul li, a{
 /* Main box with content and sidebar */
 main {
     background-color: var(--lightgrey);
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; */
     width: 100%;
     display:block;
 }
-
-/* .content {
-    display: inline-block;
-    width: 75%;
-    float: right;
-} */
 
 /* Has centered headings not display for bigger screens */
 .smallscreen {
     display: none;
 }
 
-/* .headings {
-    width: 200px;
-} */
-
-/* #about-side {
-    height: 200px;
-} */
 #about::before,
 #work::before,
 #contact::before {
@@ -105,10 +89,14 @@ main {
     border-right: 5px solid var(--porcini);
     padding: 10px 50px;
     margin-right: 10px;
+    width: 175px;
 }
 
 #about {
     width: 100%;
+    padding-top: 20px;
+    color: rgb(68, 68, 65);
+    margin-bottom: 30px;
 }
 
 #about::before {
@@ -118,6 +106,8 @@ main {
 #about p {
     width: 65%;
     float: right;
+    margin-left: 30px;
+    line-height: 1.5;
 }
 
 #work::before {
@@ -125,7 +115,7 @@ main {
 }
 
 #work {
-    width: 75%;
+    width: 100%;
     display: flex;
 }
 
@@ -135,18 +125,22 @@ main {
     flex-wrap: wrap;
 }
 
-#marketing {
-    width: 100%;
-}
-
 #marketing img {
     width: 400px;
+    margin-left: 30px;
 }
 
 .card {
     width: 50%;
-    height: 200px;
+    height: auto;
     border: 1px solid;
+    /* object-fit: cover; */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 #contact::before {
@@ -171,23 +165,26 @@ footer a {
 }
 
 /* Media queries */
-@media screen and (max-width: 992px) {
-    
+@media screen and (max-width: 914px) {
+    #about::before,
+    #work::before,
+    #contact::before {
+        width: 100px;
+    } 
 }
 
 @media screen and (max-width: 768px) {
-    .smallscreen {
-        display: block;
-        text-align: center;
-        width: 100%;
-    }
-
-    .headings {
-        display: none;
+  
+    #about::before,
+    #work::before,
+    #contact::before {
+        padding: 10px 30px;
+        font-size: 200%;
     }
     
 }
 
+/* Stops looking good below 586px */
 @media screen and (max-width: 576px) {
     .smallscreen {
         display: block;
@@ -195,7 +192,9 @@ footer a {
         width: 100%
     }
 
-    .headings {
+    #about::before,
+    #work::before,
+    #contact::before {
         display: none;
     }
 }
