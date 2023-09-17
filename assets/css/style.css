@@ -76,9 +76,11 @@ main {
     display:block;
 }
 
-/* Has centered headings not display for bigger screens */
-.smallscreen {
-    display: none;
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;;
 }
 
 #about::before,
@@ -92,7 +94,8 @@ main {
     width: 175px;
 }
 
-#about {
+#about,
+#marketing {
     width: 100%;
     padding-top: 20px;
     color: rgb(68, 68, 65);
@@ -119,33 +122,73 @@ main {
     display: flex;
 }
 
-.content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+#marketing {
+    background-image: url(../images/digital-marketing-meeting.jpg);
+    background-size: cover;
+    margin-left: 30px;
+    height: 380px;
+    width: 65%;
 }
 
-#marketing img {
-    width: 400px;
-    margin-left: 30px;
+#mountains {
+    background-image: url(../images/anchorage-mountains.jpg);
+}
+#peony {
+    background-image: url(../images/peony.jpg);
+}
+#cassie {
+    background-image: url(../images/Cassie-the-dog.JPG);
+}
+#butterfly {
+    background-image: url(../images/butterfly.jpg);
+}
+
+#placeholders {
+    width: 65%;
+    float: right;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+#mountains,
+#peony,
+#cassie,
+#butterfly {
+    background-size: cover;
+    width: 50%;
+    height: 200px;
+}
+
+/* #marketing {
+    width: 65%;
+    float: right;
+} */
+/* make images background images instead, maybe flexbox to be able to justify/align text content inside? */
+/* #marketing img {
+    /* width: 400px; */
+    /* margin-left: 30px;
+    max-height: 400px;
+    float: right;
+    margin-right: 20px;
 }
 
 .card {
     width: 50%;
     height: auto;
     border: 1px solid;
-    /* object-fit: cover; */
+    /* object-fit: cover; 
 }
 
 .card img {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
+} 
 
 #contact::before {
     content: "Contact";
-}
+} */
 
 /* Footer */
 footer {
