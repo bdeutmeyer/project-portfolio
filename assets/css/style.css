@@ -5,6 +5,7 @@
 }
 
 :root {
+    --darktext: rgb(68, 68, 65);
     --porcini: rgb(115, 115, 110);
     --lightgrey: lightgrey;
     --white: white;
@@ -89,16 +90,17 @@ main {
     font-size: 300%;
     color: var(--porcini);
     border-right: 5px solid var(--porcini);
-    padding: 10px 50px;
+    padding: 10px 50px 10px 0px;
     margin-right: 10px;
     width: 175px;
 }
 
 #about,
-#marketing {
+#work,
+#contact {
     width: 100%;
     padding-top: 20px;
-    color: rgb(68, 68, 65);
+    color: var(--darktext);
     margin-bottom: 30px;
 }
 
@@ -108,87 +110,85 @@ main {
 
 #about p {
     width: 65%;
-    float: right;
-    margin-left: 30px;
+    margin: 0px 30px;
     line-height: 1.5;
 }
 
+/* Work */
 #work::before {
     content: "Work";
 }
 
 #work {
-    width: 100%;
-    display: flex;
+    
 }
 
 #marketing {
-    background-image: url(../images/digital-marketing-meeting.jpg);
-    background-size: cover;
-    margin-left: 30px;
-    height: 380px;
     width: 65%;
-}
-
-#mountains {
-    background-image: url(../images/anchorage-mountains.jpg);
-}
-#peony {
-    background-image: url(../images/peony.jpg);
-}
-#cassie {
-    background-image: url(../images/Cassie-the-dog.JPG);
-}
-#butterfly {
-    background-image: url(../images/butterfly.jpg);
+    margin: 0px 30px;
+    position: relative;
 }
 
 #placeholders {
-    width: 65%;
-    float: right;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-end;
-}
-
-#mountains,
-#peony,
-#cassie,
-#butterfly {
-    background-size: cover;
-    width: 50%;
-    height: 200px;
-}
-
-/* #marketing {
     width: 65%;
-    float: right;
-} */
-/* make images background images instead, maybe flexbox to be able to justify/align text content inside? */
-/* #marketing img {
-    /* width: 400px; */
-    /* margin-left: 30px;
-    max-height: 400px;
-    float: right;
-    margin-right: 20px;
+    margin: 0px 30px;
 }
 
 .card {
     width: 50%;
-    height: auto;
-    border: 1px solid;
-    /* object-fit: cover; 
+    margin: auto;
 }
 
+#marketing img,
 .card img {
+    display: block;
     width: 100%;
     height: auto;
-    object-fit: cover;
-} 
+    margin: auto;
+    border: 3px solid var(--porcini);
+}
+#mountains,
+#peony,
+#cassie,
+#butterfly {
+    position: relative;
+}
+
+
+#marketing::after,
+#mountains::after,
+#peony::after,
+#cassie::after,
+#butterfly::after {
+    position: absolute;
+    background-color: var(--porcini);
+    color: var(--white);
+    border: 3px solid var(--darktext);
+    padding: 10px 20px;
+    bottom: 3px;
+    left: 3px;
+}
+
+#marketing::after {
+    content: "Challenge 1: Marketing site code refactor";
+}
+
+#mountains::after,
+#peony::after,
+#cassie::after,
+#butterfly::after {
+    content: "Coming soon"
+}
 
 #contact::before {
-    content: "Contact";
-} */
+    content: "Contact"
+}
+
+#contact ul {
+    margin-left: 30px;
+}
 
 /* Footer */
 footer {
@@ -216,6 +216,15 @@ footer a {
     } 
 }
 
+#marketing::after,
+#mountains::after,
+#peony::after,
+#cassie::after,
+#butterfly::after {
+    font-size: 75%;
+    padding: 5px 10px;
+}
+
 @media screen and (max-width: 768px) {
   
     #about::before,
@@ -239,5 +248,10 @@ footer a {
     #work::before,
     #contact::before {
         display: none;
+    }
+
+    .card {
+        width: 100%;
+        margin: auto;
     }
 }
