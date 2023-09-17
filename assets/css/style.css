@@ -56,7 +56,6 @@ nav ul {
     list-style-type: none;
     float: right;
     width: 100%;
-    position: sticky;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -96,8 +95,7 @@ main {
 }
 
 #about,
-#work,
-#contact {
+#work {
     width: 100%;
     padding-top: 20px;
     color: var(--darktext);
@@ -117,10 +115,6 @@ main {
 /* Work */
 #work::before {
     content: "Work";
-}
-
-#work {
-    
 }
 
 #marketing {
@@ -183,11 +177,46 @@ main {
 }
 
 #contact::before {
-    content: "Contact"
+    content: "Contact";
+    /* position: absolute; */
 }
 
-#contact ul {
-    margin-left: 30px;
+#contact {
+    padding: 20px 0px 30px;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    color: var(--darktext);
+}
+
+#details {
+    width: 65%;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#details ul {
+    display: flex;
+    flex-direction: row;
+}
+#details li { 
+    padding: 20px;
+}
+
+#headshot {
+    width: 8%;
+    border: 3px solid var(--porcini);
+    margin-right: 30px;
+}
+
+#headshot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
 }
 
 /* Footer */
