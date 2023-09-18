@@ -19,7 +19,7 @@ body {
 /* Header */
 header {
     background-image: url(../images/frost.jpg);
-    background-size: contain;
+    background-size: repeat;
     display: block;
     border-bottom: 15px solid  var(--porcini);
     position: relative;
@@ -210,7 +210,9 @@ footer p {
 }
 
 footer a {
-    padding: 0;
+    padding: 0px;
+    text-decoration: none;
+    color: var(--white);
 }
 
 /* Media queries */
@@ -254,20 +256,29 @@ footer a {
 }
 
 @media screen and (max-width: 576px) {
+    #about,
+    #work,
+    #contact {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+}
+
     #about h2,
     #work h2,
     #contact h2 {
-        flex: 15%;
-        font-size: 100%;
-        margin-left: 5px;
-    }
-
+        font-size: 200%;
+        text-decoration: underline;
+        border-right: none;
+        margin: 0;
+        text-align: center;
+        padding-bottom: 5px;
+}
     #headshot {
         width: 25%;
-    }
-
-    #about p {
-        flex: 60%;
+        padding: 0;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .card {
@@ -281,5 +292,16 @@ footer a {
     #butterfly::after {
         padding: 5px 10px;
         font-size: 70%;
-        }
+    }
+
+    #details li {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 447px) {
+    h1::after {
+        top: 155px;
+    }
+    
 }
