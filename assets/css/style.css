@@ -19,15 +19,17 @@ header {
     position: relative;
 }
 
-/* 
-For profile image (but I think I want it at the bottom instead)
-img {
-    width: 60px;
-    height: auto;
+/* #headshot {
+    max-width: 15%;
     position: absolute;
-    top: 5px;
-    right: 5px;
-} */
+    top: 2px;
+    right: 2px;
+}
+
+#headshot img {
+    width: 100%;
+    height: auto;
+}  */
 
 /* Main heading */
 h1 {
@@ -73,61 +75,45 @@ nav ul li, a{
 main {
     background-color: var(--lightgrey);
     width: 100%;
-    display:block;
-}
-
-.content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;;
-}
-
-#about::before,
-#work::before,
-#contact::before {
-    font-size: 300%;
-    color: var(--porcini);
-    border-right: 5px solid var(--porcini);
-    padding: 10px 50px 10px 0px;
-    margin-right: 10px;
-    width: 175px;
+    display: block;
 }
 
 #about,
-#work {
+#work,
+#contact {
     width: 100%;
     padding-top: 20px;
     color: var(--darktext);
     margin-bottom: 30px;
+    display: flex;
 }
-
-#about::before {
-    content: "About";
+#about h2,
+#work h2,
+#contact h2 {
+    flex: 20%;
+    font-size: 200%;
+    border-right: 5px solid var(--porcini);
+    margin-left: 30px;
 }
 
 #about p {
-    width: 65%;
+    flex: 75%;
     margin: 0px 30px;
     line-height: 1.5;
 }
 
-/* Work */
-#work::before {
-    content: "Work";
+#work-images {
+    flex: 75%;
+    margin: 0px 30px;
 }
 
 #marketing {
-    width: 65%;
-    margin: 0px 30px;
     position: relative;
 }
 
 #placeholders {
     display: flex;
     flex-flow: row wrap;
-    width: 65%;
-    margin: 0px 30px;
 }
 
 .card {
@@ -176,23 +162,9 @@ main {
     content: "Coming soon"
 }
 
-#contact::before {
-    content: "Contact";
-    /* position: absolute; */
-}
-
-#contact {
-    padding: 20px 0px 30px;
-    width: 100%;
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-end;
-    color: var(--darktext);
-}
-
 #details {
-    width: 65%;
-    margin-left: 60px;
+    width: 75%;
+    margin: 0px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -204,19 +176,8 @@ main {
 }
 #details li { 
     padding: 20px;
-}
-
-#headshot {
-    width: 8%;
-    border: 3px solid var(--porcini);
-    margin-right: 30px;
-}
-
-#headshot img {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: auto;
+    text-decoration: none;
+    color: var(--darktext);
 }
 
 /* Footer */
@@ -237,50 +198,24 @@ footer a {
 }
 
 /* Media queries */
-@media screen and (max-width: 914px) {
-    #about::before,
-    #work::before,
-    #contact::before {
-        width: 100px;
-    } 
-}
 
-#marketing::after,
-#mountains::after,
-#peony::after,
-#cassie::after,
-#butterfly::after {
-    font-size: 75%;
-    padding: 5px 10px;
-}
-
-@media screen and (max-width: 768px) {
+/* Tablets - header changes color */
+/* @media screen and (max-width: 992px) {
+    header {
+      background: #772014;
+    }
+  } */
   
-    #about::before,
-    #work::before,
-    #contact::before {
-        padding: 10px 30px;
-        font-size: 200%;
+  /* Large smartphones - navbar changes color */
+  /* @media screen and (max-width: 768px) {
+    nav {
+      background-color: #bb8588;
     }
-    
-}
-
-/* Stops looking good below 586px */
-@media screen and (max-width: 576px) {
-    .smallscreen {
-        display: block;
-        text-align: center;
-        width: 100%
+  } */
+  
+  /* Small smartphones - image placeholders change color */
+  /* @media screen and (max-width: 576px) {
+    .sample-img {
+      background-color: #8ac4ff;
     }
-
-    #about::before,
-    #work::before,
-    #contact::before {
-        display: none;
-    }
-
-    .card {
-        width: 100%;
-        margin: auto;
-    }
-}
+  } */
