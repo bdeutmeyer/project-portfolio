@@ -10,6 +10,11 @@
     --lightgrey: lightgrey;
     --white: white;
 }
+
+body {
+    background-color: var(--lightgrey);
+    width: 100vw;
+}
 /* Header */
 header {
     background-image: url(../images/frost.jpg);
@@ -17,19 +22,9 @@ header {
     display: block;
     border-bottom: 15px solid  var(--porcini);
     position: relative;
+    margin: 0;
+    width: 100vw;
 }
-
-/* #headshot {
-    max-width: 15%;
-    position: absolute;
-    top: 2px;
-    right: 2px;
-}
-
-#headshot img {
-    width: 100%;
-    height: auto;
-}  */
 
 /* Main heading */
 h1 {
@@ -87,6 +82,7 @@ main {
     margin-bottom: 30px;
     display: flex;
 }
+
 #about h2,
 #work h2,
 #contact h2 {
@@ -96,14 +92,24 @@ main {
     margin-left: 30px;
 }
 
+#headshot {
+    width: 15%;
+    padding-left: 30px;
+}
+
+#headshot img {
+    width: 100%;
+    height: auto;
+} 
+
 #about p {
-    flex: 75%;
+    flex: 65%;
     margin: 0px 30px;
     line-height: 1.5;
 }
 
 #work-images {
-    flex: 75%;
+    flex: 80%;
     margin: 0px 30px;
 }
 
@@ -163,19 +169,18 @@ main {
 }
 
 #details {
-    width: 75%;
+    width: 80%;
     margin: 0px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#details ul {
-    display: flex;
-    flex-direction: row;
-}
 #details li { 
-    padding: 20px;
+    padding: 20px 0 20px;
+}
+
+#details a {
     text-decoration: none;
     color: var(--darktext);
 }
@@ -198,24 +203,72 @@ footer a {
 }
 
 /* Media queries */
+@media screen and (max-width: 992px) {
+    #about h2,
+    #work h2,
+    #contact h2 {
+        font-size: 175%;
+    }
+}
 
-/* Tablets - header changes color */
-/* @media screen and (max-width: 992px) {
-    header {
-      background: #772014;
+@media screen and (max-width: 768px) {
+    #about h2,
+    #work h2,
+    #contact h2 {
+        font-size: 150%;
     }
-  } */
-  
-  /* Large smartphones - navbar changes color */
-  /* @media screen and (max-width: 768px) {
-    nav {
-      background-color: #bb8588;
+
+    #headshot {
+        width: 20%;
     }
-  } */
-  
-  /* Small smartphones - image placeholders change color */
-  /* @media screen and (max-width: 576px) {
-    .sample-img {
-      background-color: #8ac4ff;
+
+    #about p {
+        flex: 60%;
     }
-  } */
+
+    #marketing::after,
+    #mountains::after,
+    #peony::after,
+    #cassie::after,
+    #butterfly::after {
+        padding: 8px 15px;
+        font-size: 75%;
+    }
+
+    #details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }   
+}
+
+@media screen and (max-width: 576px) {
+    #about h2,
+    #work h2,
+    #contact h2 {
+        flex: 15%;
+        font-size: 100%;
+        margin-left: 5px;
+    }
+
+    #headshot {
+        width: 25%;
+    }
+
+    #about p {
+        flex: 60%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    #marketing::after,
+    #mountains::after,
+    #peony::after,
+    #cassie::after,
+    #butterfly::after {
+        padding: 5px 10px;
+        font-size: 70%;
+        }
+}
