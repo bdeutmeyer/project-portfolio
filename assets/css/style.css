@@ -120,13 +120,17 @@ main {
     margin: 0px 30px;
 }
 
-#marketing {
+#whatsinthismeal {
     position: relative;
 }
 
-#marketing:hover {
+#whatsinthismeal:hover,
+#weather:hover,
+#quiz:hover,
+#refactor:hover {
     box-shadow: 5px 5px 5px 5px var(--darktext);
 }
+
 
 #placeholders {
     display: flex;
@@ -138,7 +142,7 @@ main {
     margin: auto;
 }
 
-#marketing img,
+#whatsinthismeal img,
 .card img {
     display: block;
     width: 100%;
@@ -146,19 +150,20 @@ main {
     margin: auto;
     border: 3px solid var(--porcini);
 }
-#mountains,
-#peony,
-#cassie,
-#butterfly {
+
+#weather,
+#quiz,
+#refactor,
+#peony {
     position: relative;
 }
 
 
-#marketing::after,
-#mountains::after,
-#peony::after,
-#cassie::after,
-#butterfly::after {
+#whatsinthismeal::after,
+#weather::after,
+#quiz::after,
+#refactor::after,
+#peony::after {
     position: absolute;
     background-color: var(--porcini);
     color: var(--white);
@@ -168,14 +173,23 @@ main {
     left: 3px;
 }
 
-#marketing::after {
-    content: "Challenge 1: Marketing site code refactor";
+#whatsinthismeal::after {
+    content: "Project 1: Interactive Web application";
 }
 
-#mountains::after,
-#peony::after,
-#cassie::after,
-#butterfly::after {
+#weather::after {
+    content: "Challenge 6: Weather Dashboard"
+}
+
+#refactor::after {
+    content: "Challenge 4: JavaScript Quiz"
+}
+
+#refactor::after {
+    content: "Challenge 1: Marketing Refactor Site"
+}
+
+#peony::after {
     content: "Coming soon"
 }
 
@@ -239,11 +253,11 @@ footer a {
         flex: 60%;
     }
 
-    #marketing::after,
-    #mountains::after,
-    #peony::after,
-    #cassie::after,
-    #butterfly::after {
+    #whatsinthismeal::after,
+    #weather::after,
+    #quiz::after,
+    #refactor::after,
+    #peony::after {
         padding: 8px 15px;
         font-size: 75%;
     }
@@ -285,11 +299,11 @@ footer a {
         width: 100%;
     }
 
-    #marketing::after,
-    #mountains::after,
-    #peony::after,
-    #cassie::after,
-    #butterfly::after {
+    #whatsinthismeal::after,
+    #weather::after,
+    #quiz::after,
+    #refactor::after,
+    #peony::after {
         padding: 5px 10px;
         font-size: 70%;
     }
