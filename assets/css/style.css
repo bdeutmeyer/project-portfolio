@@ -120,17 +120,17 @@ main {
     margin: 0px 30px;
 }
 
-#whatsinthismeal {
+#gameon {
     position: relative;
 }
 
+#gameon:hover,
 #whatsinthismeal:hover,
 #weather:hover,
 #quiz:hover,
 #refactor:hover {
     box-shadow: 5px 5px 5px 5px var(--darktext);
 }
-
 
 #placeholders {
     display: flex;
@@ -142,7 +142,7 @@ main {
     margin: auto;
 }
 
-#whatsinthismeal img,
+#gameon img,
 .card img {
     display: block;
     width: 100%;
@@ -151,19 +151,20 @@ main {
     border: 3px solid var(--porcini);
 }
 
+#whatsinthismeal,
+
 #weather,
 #quiz,
-#refactor,
-#peony {
+#refactor {
     position: relative;
 }
 
 
+#gameon::after,
 #whatsinthismeal::after,
 #weather::after,
 #quiz::after,
-#refactor::after,
-#peony::after {
+#refactor::after {
     position: absolute;
     background-color: var(--porcini);
     color: var(--white);
@@ -173,8 +174,11 @@ main {
     left: 3px;
 }
 
+#gameon::after {
+    content: "Project 2: Full-stack web application"
+}
 #whatsinthismeal::after {
-    content: "Project 1: Interactive Web application";
+    content: "Project 1: Interactive web application";
 }
 
 #weather::after {
@@ -187,10 +191,6 @@ main {
 
 #refactor::after {
     content: "Challenge 1: Marketing Refactor Site"
-}
-
-#peony::after {
-    content: "Coming soon"
 }
 
 #details {
@@ -253,11 +253,11 @@ footer a {
         flex: 60%;
     }
 
+    #gameon::after,
     #whatsinthismeal::after,
     #weather::after,
     #quiz::after,
-    #refactor::after,
-    #peony::after {
+    #refactor::after {
         padding: 8px 15px;
         font-size: 75%;
     }
@@ -299,11 +299,11 @@ footer a {
         width: 100%;
     }
 
+    #gameon::after,
     #whatsinthismeal::after,
     #weather::after,
     #quiz::after,
-    #refactor::after,
-    #peony::after {
+    #refactor::after {
         padding: 5px 10px;
         font-size: 70%;
     }
